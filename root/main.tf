@@ -1,17 +1,17 @@
 terraform {
-    required_providers{
-       azurerm = {
-        source = "hashicorp/azurerm"
-        version = "~>5.0.0"
-        }
+  required_providers {
+    azurerm = {
+      source  = "hashicorp/azurerm"
+      version = "~>5.0.0"
     }
+  }
 }
 
-provider "azurerm"{
-    features{}
+provider "azurerm" {
+  features {}
 }
 
 resource "azurerm_resource_group" "rg1" {
-    name= "rg"
-    location = "eastus"
+  name     = "rg"
+  location = "eastus"
 }
